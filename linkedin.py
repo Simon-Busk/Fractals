@@ -52,7 +52,7 @@ def draw_fractal(ax, iteration, shape_type):
         all_transforms.extend(new_transforms)
 
     for tform in all_transforms:
-        triangle = patches.Polygon(vertices, closed=True, edgecolor='black', facecolor='black')
+        triangle = patches.Polygon(vertices, closed=True, edgecolor='black', facecolor='blue', alpha= 0.5)
         triangle.set_transform(tform + ax.transData)
         ax.add_patch(triangle)
 
